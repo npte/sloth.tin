@@ -1,0 +1,58 @@
+#action {%1 -- 'target %2'} {
+	#if {%1 == MSDP_GROUP_LEADER} {
+		#var {target} {%2};
+	};
+};
+
+#action {%1 -- 'recall'} {
+	#if {%1 == MSDP_GROUP_LEADER} {
+		cast 'word of recall';
+	};
+};
+
+#action {%1 -- 'all up'} {
+	#if {%1 == MSDP_GROUP_LEADER} {
+		wake;
+		stand;
+	};
+};
+
+
+#action {%1 enters the glowing archway and disappears from sight} {
+	#if {%1 == MSDP_GROUP_LEADER} {
+		enter archway;
+	};
+};
+
+#action {%1 enters the archway and disappears from sight} {
+	#if {%1 == MSDP_GROUP_LEADER} {
+		enter archway;
+	};
+};
+
+#action {%1 has just entered the portal} {
+	#if {%1 == MSDP_GROUP_LEADER} {
+		enter portal;
+	};
+};
+
+#alias {autoassist} {
+	#if {&{MSDP_GROUP}} {
+		#foreach {*MSDP_GROUP[]} {member} {	
+			#if {"$MSDP_GROUP[$member][NAME]" == "$MSDP_TANK_NAME"} {
+				#var {tank} {$member};
+			};
+			#if {"$MSDP_GROUP[$member][NAME]" == "$MSDP_CHARACTER_NAME"} {
+				#var {me} {$member};
+			};	
+		};
+		#if {"$MSDP_TANK_NAME" != "$MSDP_CHARACTER_NAME"} {
+			#if { "$MSDP_GROUP[$tank][STATUS]" == "Fighting" && "$MSDP_POSITION" != "Fighting" && "$MSDP_GROUP[$me][STATUS]" != "Absent" } {
+				assist $MSDP_TANK_NAME;
+			};
+			#if { "$MSDP_GROUP[$tank][STATUS]" == "Fighting" && "$MSDP_GROUP[$me][STATUS]" == "Absent" } {
+				#showme {THE TANK IS Fighting, I AM ABSENT! $MSDP_GROUP[$tank][STATUS] $MSDP_GROUP[$me][STATUS] }
+			};
+		};
+	};
+}

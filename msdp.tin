@@ -1,0 +1,153 @@
+#format IAC  %a 255
+#format DONT %a 254
+#format DO   %a 253
+#format WONT %a 252
+#format WILL %a 251
+#format SB   %a 250
+#format SE   %a 240
+
+#format MSDP %a  69
+
+#format VAR  %a  01
+#format VAL  %a  02
+
+#var {MSDP_REPORTABLE_VARIABLES}
+{
+	{CHARACTER_NAME};
+	{TANK_NAME};
+	{GROUP_LEADER};
+	{HEALTH};
+	{HEALTH_MAX};
+	{MANA};
+	{MANA_MAX};
+	{MOVEMENT};
+	{MOVEMENT_MAX};
+	{AFFECTS};
+	{AC};
+	{GROUP};
+	{POSITION};
+}
+
+#event {IAC WILL MSDP}
+{
+	#send {$IAC$DO$MSDP\};
+	msdp_report
+}
+
+#event {IAC SB MSDP}
+{
+	#var {MSDP_%0} {%1};
+	#foreach {*MSDP_AFFECTS[]} {aff} 
+	{
+		#if {$MSDP_AFFECTS[$aff] > -1} 
+		{
+#nop			#showme $aff $MSDP_AFFECTS[$aff]
+		}
+    };
+	show_status_line;
+	show_aff_line;
+	autoassist;
+}
+
+#alias {show_aff_line} {
+	#if {&{MSDP_AFFECTS}} {
+		
+		#var {ac} {AC};
+		#if {&{MSDP_AC}} {
+			#var {ac} {$MSDP_AC}
+		};
+		#var {acc} {<ccc>};
+		#var {accd} {-1};
+		#foreach {{armor};{stone skin};{iron skin};{bone armor};{petrified armor}} {name} {
+			#math {duration} {1 * $MSDP_AFFECTS[$name]};
+			#if {$duration > $accd} {
+				#var {accd} {$duration}
+			};
+		};
+		#if {$accd > 0} { #var {acc} {<ffa>} };
+		#if {$accd > 60} { #var {acc} {<afa>} };
+		
+		#var {fc} {<ccc>};
+		#var {fcd} {-1};
+		#foreach {{greater fluidity};{fluidity}} {name} {
+			#math {duration} {1 * $MSDP_AFFECTS[$name]};
+			#if {$duration > $fcd} {
+				#var {fcd} {$duration}
+			};
+		};
+		#if {$fcd > 0} { #var {fc} {<ffa>} };
+		#if {$fcd > 60} { #var {fc} {<afa>} };
+		
+		#var {bc} {<ccc>};
+		#var {bcd} {-1};
+		#foreach {{bless};{grace};{unholy aura};{demonic aura}} {name} {
+			#math {duration} {1 * $MSDP_AFFECTS[$name]};
+			#if {$duration > $bcd} {
+				#var {bcd} {$duration}
+			};
+		};
+		#if {$bcd > 0} { #var {bc} {<ffa>} };
+		#if {$bcd > 60} { #var {bc} {<afa>} };
+		
+		#var {lc} {<ccc>};
+		#var {lcd} {-1};
+		#foreach {{shield of faith};{sanctuary};{aegis};{wall of flesh};{flesh golem}} {name} {
+			#math {duration} {1 * $MSDP_AFFECTS[$name]};
+			#if {$duration > $lcd} {
+				#var {lcd} {$duration}
+			};
+		};
+		#if {$lcd > 0} { #var {lc} {<ffa>} };
+		#if {$lcd > 60} { #var {lc} {<afa>} };
+		#format {affects} {%s%+5s<099> %sB<099>%sF<099>%sL<099>} {$acc} {$ac} {$bc} {$fc} {$lc};
+		#showme {$affects} 0 23;			 
+	}
+}
+
+#alias {show_status_line}
+{
+	#if {&{MSDP_HEALTH} && &{MSDP_MANA} && &{MSDP_MOVEMENT}} 
+	{ 
+		#math {hpd} {100 * $MSDP_HEALTH / $MSDP_HEALTH_MAX};
+		#math {mad} {100 * $MSDP_MANA / $MSDP_MANA_MAX};
+		#math {mvd} {100 * $MSDP_MOVEMENT / $MSDP_MOVEMENT_MAX};
+	
+		#var {hpc} {<faa>};
+		#if {$hpd > 30} { #var {hpc} {<ffa>} };
+		#if {$hpd > 75} { #var {hpc} {<afa>} };
+	
+		#var {mac} {<faa>};
+		#if {$mad > 30} { #var {mac} {<ffa>} };
+		#if {$mad > 75} { #var {mac} {<afa>} };
+	
+		#var {mvc} {<faa>};
+		#if {$mvd > 30} { #var {mvc} {<ffa>} };
+		#if {$mvd > 75} { #var {mvc} {<afa>} };
+	
+		#format {status} {%s%+4s<099>hp %s%+4s<099>ma %s%+4s<099>mv} {$hpc} {$MSDP_HEALTH} {$mac} {$MSDP_MANA} {$mvc} {$MSDP_MOVEMENT};
+	
+		#show {$status} 0 2;
+	}
+}
+
+#alias {msdp_report}
+{
+    #var result {$IAC$SB$MSDP${VAR}REPORT};
+    #foreach {*MSDP_REPORTABLE_VARIABLES[]} {tmp}
+    {
+        #var result {$result${VAL}$tmp}
+    };
+    #send {$result$IAC$SE\}
+}
+
+#alias {msdp_send}
+{
+	#send {$IAC$SB$MSDP${VAR}SEND${VAL}%0$IAC$SE\}
+}
+
+#alias {msdp_list}
+{
+	#send {$IAC$SB$MSDP${VAR}LIST${VAL}%0$IAC$SE\}
+}
+
+
