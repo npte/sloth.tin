@@ -32,6 +32,8 @@
 
 #nop Knifey has just entered the portal
 #action {%1 has just entered the portal} {
+    echo %1;
+    echo $MSDP_GROUP_LEADER;
 	#if {%1 == $MSDP_GROUP_LEADER} {
 		enter portal;
 	};
