@@ -1,17 +1,17 @@
 #action {%1 -- 'target %2'} {
-	#if {%1 == "$MSDP_GROUP_LEADER"} {
+	#if {%1 == $MSDP_GROUP_LEADER} {
 		#var {target} {%2};
 	};
 };
 
 #action {%1 -- 'recall'} {
-	#if {%1 == "$MSDP_GROUP_LEADER"} {
+	#if {%1 == $MSDP_GROUP_LEADER} {
 		cast 'word of recall';
 	};
 };
 
 #action {%1 -- 'all up'} {
-	#if {%1 == "$MSDP_GROUP_LEADER"} {
+	#if {%1 == $MSDP_GROUP_LEADER} {
 		wake;
 		stand;
 	};
@@ -19,20 +19,22 @@
 
 
 #action {%1 enters the glowing archway and disappears from sight} {
-	#if {%1 == "$MSDP_GROUP_LEADER"} {
+	#if {%1 == $MSDP_GROUP_LEADER} {
 		enter archway;
 	};
 };
 
 #action {%1 enters the archway and disappears from sight} {
-	#if {%1 == "$MSDP_GROUP_LEADER"} {
+	#if {%1 == $MSDP_GROUP_LEADER} {
 		enter archway;
 	};
 };
 
 #nop Knifey has just entered the portal
 #action {%1 has just entered the portal} {
-	#if {%1 == "$MSDP_GROUP_LEADER"} {
+    #echo %1
+    #echo $MSDP_GROUP_LEADER
+	#if {%1 == $MSDP_GROUP_LEADER} {
 		enter portal;
 	};
 };
