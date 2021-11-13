@@ -99,7 +99,18 @@
 		};
 		#if {$lcd > 0} { #var {lc} {<ffa>} };
 		#if {$lcd > 60} { #var {lc} {<afa>} };
-		#format {affects} {%s%+5s<099> %sB<099>%sF<099>%sL<099>} {$acc} {$ac} {$bc} {$fc} {$lc};
+		
+		#var {hc} {<ccc>};
+		#var {hcd} {-1};
+		#foreach {{haste};{improved haste}} {name} {
+			#math {duration} {1 * $MSDP_AFFECTS[$name]};s
+			#if {$duration > $lcd} {
+				#var {lcd} {$duration}
+			};
+		};
+		#if {$hcd > 0} { #var {hc} {<ffa>} };
+		#if {$hcd > 60} { #var {hc} {<afa>} };
+		#format {affects} {%s%+5s<099> %sB<099>%sF<099>%sL<099>%sH<099>} {$acc} {$ac} {$bc} {$fc} {$lc} {$hc};
 		#showme {$affects} 0 23;			 
 	}
 }
