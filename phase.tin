@@ -5,7 +5,7 @@
 #var checkarenaenter "-1"
 #var watercontainer barrel
 
-#var armor {stone skin}
+#var armor {petrified armor}
 #var bless {bless}
 #var lite {aegis}
 #var flui {greater fluidity}
