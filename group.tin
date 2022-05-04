@@ -30,6 +30,12 @@
 	};
 };
 
+#action {%1 steps through the portal and disappears!} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		enter portal;
+	};
+};
+
 #nop Knifey has just entered the portal
 #action {%1 has just entered the portal} {
 	#if {"%1" == "$MSDP_GROUP_LEADER"} {
