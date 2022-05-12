@@ -1,0 +1,19 @@
+#action {screams in pain from the fire!} {
+	#var autospell {firewind};
+};
+
+#action {is turned into dust} {
+	cast '$autospell'
+};
+
+#action {You failed to cast 'disintegrate'} {
+	cast '$autospell'
+};
+
+#action {vanishes in a burning wind} {
+	cast '$autospell'
+};
+
+#action {You failed to cast 'firewind'} {
+	cast '$autospell'
+};

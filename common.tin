@@ -1,7 +1,7 @@
 #class PINGER read pinger.tin
 #class GROUP read group.tin
-#var false false
-#var true true
+#var false {false}
+#var true {true}
 
 #alias trg {
 	#var target %1;
@@ -413,6 +413,17 @@
     } {
         #var autostrike $false;
         #class AUTOSTRIKE kill;
+    }
+}
+
+#var autoblast $false
+#alias {autoblast} {
+    #if {"$autoblast" == "$false"} {
+        #var autoblast $true;
+        #class AUTOBLAST read autoblast.tin;
+    } {
+        #var autoblast $false;
+        #class AUTOBLAST kill;
     }
 }
 

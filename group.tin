@@ -71,6 +71,10 @@
 				#if {"$autostrike" == "$true"} {
 			        strike;
 			    }
+				#if {"$autoblast" == "$true"} {
+					#var autospell {disintegrate};
+			        cast '$autospell'
+			    }
 			};
 			#if { "$MSDP_GROUP[$tank][STATUS]" == "Fighting" && "$MSDP_GROUP[$me][STATUS]" == "Absent" } {
 				#showme {THE TANK IS Fighting, I AM ABSENT! $MSDP_GROUP[$tank][STATUS] $MSDP_GROUP[$me][STATUS] }
