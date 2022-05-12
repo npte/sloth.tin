@@ -17,6 +17,19 @@
 	};
 };
 
+#action {%1 -- 'drop choppers'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		rem chopper;
+		drop all.chopper;
+	};
+};
+
+#action {%1 -- 'portal'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		enter portal
+	};
+};
+
 
 #action {%1 enters the glowing archway and disappears from sight} {
 	#if {"%1" == "$MSDP_GROUP_LEADER"} {
@@ -36,7 +49,6 @@
 	};
 };
 
-#nop Knifey has just entered the portal
 #action {%1 has just entered the portal} {
 	#if {"%1" == "$MSDP_GROUP_LEADER"} {
 		enter portal;
@@ -56,6 +68,9 @@
 		#if {"$MSDP_TANK_NAME" != "$MSDP_CHARACTER_NAME"} {
 			#if { "$MSDP_GROUP[$tank][STATUS]" == "Fighting" && "$MSDP_POSITION" != "Fighting" && "$MSDP_GROUP[$me][STATUS]" != "Absent" } {
 				assist $MSDP_TANK_NAME;
+				#if {"$autostrike" == "$true"} {
+			        strike;
+			    }
 			};
 			#if { "$MSDP_GROUP[$tank][STATUS]" == "Fighting" && "$MSDP_GROUP[$me][STATUS]" == "Absent" } {
 				#showme {THE TANK IS Fighting, I AM ABSENT! $MSDP_GROUP[$tank][STATUS] $MSDP_GROUP[$me][STATUS] }

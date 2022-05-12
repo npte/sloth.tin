@@ -1,5 +1,7 @@
 #class PINGER read pinger.tin
 #class GROUP read group.tin
+#var false false
+#var true true
 
 #alias trg {
 	#var target %1;
@@ -115,6 +117,14 @@
 
 #alias {fwt} {
     cast 'firewind' $target
+};
+
+#alias {disi} {
+    cast 'disint' %1
+};
+
+#alias {disit} {
+    cast 'disint' $target
 };
 
 #alias {ds} {
@@ -397,7 +407,7 @@
 
 #var autostrike $false
 #alias {autostrike} {
-    #if {$autostrike == $false} {
+    #if {"$autostrike" == "$false"} {
         #var autostrike $true;
         #class AUTOSTRIKE read autostrike.tin;
     } {
