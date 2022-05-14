@@ -1,23 +1,22 @@
 #class MSDP read msdp.tin
 #class COMMON read common.tin
 #class TRACK read track.tin
-#class PINGER read pinger.tin
 #class GROUP read group.tin
 
 #var checkarenaenter "-1"
-#var watercontainer barrel
+#var watercontainer waterskin
 
-#var armor {petrified armor}
+#var armor {armor}
 #var bless {bless}
-#var lite {aegis}
-#var flui {greater fluidity}
+#var lite {shield of faith}
+#var flui {fluidity}
 
-#var attether {cast 'firewind'}
-#var attsolid {cast 'firewind'}
+#var attether {cast 'turn undead'}
+#var attsolid {kick}
 
-#var CAN_WRAITH {"true"}
+#var CAN_WRAITH {"false"}
 
-#split
+#split 0 1
 
 #alias ceph shape cephalopod
 #alias sret shape return
@@ -38,4 +37,8 @@
 #act {You get wreath of the ordained from the corpse of Lila that's on the ground} {drop wreath} 
 #act {You get an ancient parchment from the corpse of the librarian that's on the ground} {drop parchment}
 #act {You get a tattered note from the corpse} {drop note}
+
+
+
+#sess sloth slothmud.org 6101
 

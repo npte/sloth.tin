@@ -1,5 +1,3 @@
-#class PINGER read pinger.tin
-#class GROUP read group.tin
 #var false {false}
 #var true {true}
 
@@ -413,7 +411,8 @@
     } {
         #var autostrike $false;
         #class AUTOSTRIKE kill;
-    }
+    };
+    #echo {Autostrike $autostrike};
 }
 
 #var autoblast $false
@@ -424,21 +423,21 @@
     } {
         #var autoblast $false;
         #class AUTOBLAST kill;
-    }
+    };
+    #echo {Autoblast $autoblast};
 }
 
 #var autokick $false
 #alias {autokick} {
-    #if {$autokick == $false} {
+    #if {"$autokick" == "$false"} {
         #var autokick $true;
         #class AUTOKICK read autokick.tin;
     } {
         #var autokick $false;
         #class AUTOKICK kill;
-    }
+    };
+    #echo {Autokick $autokick};
 }
-
-
 
 
 #nop ======= RUNS ========

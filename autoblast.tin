@@ -3,17 +3,24 @@
 };
 
 #action {is turned into dust} {
-	cast '$autospell'
+	blast
 };
 
 #action {You failed to cast 'disintegrate'} {
-	cast '$autospell'
+	blast
 };
 
 #action {vanishes in a burning wind} {
-	cast '$autospell'
+	blast
 };
 
 #action {You failed to cast 'firewind'} {
-	cast '$autospell'
+	blast
 };
+
+#alias blast {
+	#if {$MSDP_MANA > 100}
+	{
+		cast '$autospell'
+	}
+}
