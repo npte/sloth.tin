@@ -2,6 +2,8 @@
 #class COMMON read common.tin
 #class TRACK read track.tin
 #class GROUP read group.tin
+#class HIHGLIGHT read hihglight.tin
+#class PINGER read pinger.tin
 
 #var checkarenaenter "-1"
 #var watercontainer waterskin
@@ -38,7 +40,4 @@
 #act {You get an ancient parchment from the corpse of the librarian that's on the ground} {drop parchment}
 #act {You get a tattered note from the corpse} {drop note}
 
-
-
 #sess sloth slothmud.org 6101
-
