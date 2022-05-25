@@ -1,5 +1,11 @@
 #nop a reddish-colored glass eye
-#high {chunk of red volcanic glass} {bold cyan}
-#high {some fine sanding paper} {bold cyan}
-#high {chunk of black glass} {bold cyan}
+#nop #high {chunk of red volcanic glass} {bold cyan}
+#nop #high {some fine sanding paper} {bold cyan}
+#nop #high {chunk of black glass} {bold cyan}
 #high {some hot embers} {bold cyan}
+
+#nop a flawed glowing gem
+#nop #high {small golden ember of flames} {bold cyan}
+#high {some magical enchanting dust} {bold cyan}
+#nop #high {large glowing green emerald} {bold cyan}
+#nop #high {small gem hammer} {bold cyan}

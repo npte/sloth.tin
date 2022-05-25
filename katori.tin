@@ -6,9 +6,9 @@
 #class PINGER read pinger.tin
 
 #var checkarenaenter "-1"
-#var watercontainer waterskin
+#var watercontainer water-pail
 
-#var armor {armor}
+#var armor {stone skin}
 #var bless {bless}
 #var lite {shield of faith}
 #var flui {fluidity}
