@@ -10,6 +10,24 @@
 	};
 };
 
+#action {You failed to cast 'word of recall'} {cast 'word of recall'} 
+
+#action {%1 -- 'visage'} {
+        #if {"%1" == "$MSDP_GROUP_LEADER"} {
+                cast 'undead visage';
+        };
+};
+
+#action {You failed to cast 'undead visage'} {cast 'undead visage'}
+
+#var holdfrontline 0
+#alias maneuver {
+	#if {$holdfrontline == 0} {
+                man back;
+        };
+}
+
+
 #action {%1 -- 'all up'} {
 	#if {"%1" == "$MSDP_GROUP_LEADER"} {
 		wake;
