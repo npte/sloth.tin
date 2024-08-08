@@ -104,8 +104,8 @@
 		#var {hcd} {-1};
 		#foreach {{haste};{improved haste}} {name} {
 			#math {duration} {1 * $MSDP_AFFECTS[$name]};
-			#if {$duration > $lcd} {
-				#var {lcd} {$duration}
+			#if {$duration > $hcd} {
+				#var {hcd} {$duration}
 			};
 		};
 		#if {$hcd > 0} { #var {hc} {<ffa>} };

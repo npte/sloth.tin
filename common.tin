@@ -48,7 +48,9 @@
 	};
 };
 
-#alias {loadarenabot} {#class ARENA read arena.tin};
+#alias {ihaste} {
+    cast 'improved haste'
+}
 
 #alias {dg} {
 	#if {"%1" != ""} {
@@ -427,6 +429,22 @@
     #echo {Autoblast $autoblast};
 }
 
+#var autoheal $false
+#alias {autoheal} {
+    #if {"$autoheal" == "$false"} {
+        #if {"$autoblast" == "$false"} {
+            #var autoblast $false;
+            #class AUTOBLAST kill;
+        };
+        #var autoheal $true;
+        #class AUTOHEAL read autoheal.tin;
+    } {
+        #var autoheal $false;
+        #class AUTOHEAL kill;
+    };
+    #echo {Autoheal $autoheal};
+}
+
 #var autokick $false
 #alias {autokick} {
     #if {"$autokick" == "$false"} {
@@ -438,7 +456,6 @@
     };
     #echo {Autokick $autokick};
 }
-
 
 #nop ======= RUNS ========
 #alias sg2pops {#10 n;e;n;w;n;n;#4 e;n;n;e;e;ope doors;e;e;ope gate;e;close gate}

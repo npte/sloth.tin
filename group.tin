@@ -4,6 +4,35 @@
 	};
 };
 
+#action {%1 -- 'entrench'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		entrench;
+	};
+};
+
+#action {You fail in your attempt to dig in.} {entrench} 
+
+#action {%1 -- 'spectral'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		cast 'spectral shield';
+	};
+};
+#action {%1 -- 'spectrals'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		cast 'spectral shield';
+	};
+};
+
+#action {You failed to cast 'spectral shield'} {cast 'spectral shield'} 
+
+#action {%1 -- 'mindbar'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		cast 'mindbar';
+	};
+};
+
+#action {You failed to cast 'mindbar'} {cast 'mindbar'} 
+
 #action {%1 -- 'recall'} {
 	#if {"%1" == "$MSDP_GROUP_LEADER"} {
 		cast 'word of recall';
