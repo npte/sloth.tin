@@ -1,2 +1,4 @@
 *.log
 mintty.con
+phase.lnk
+.tintin/**
