@@ -1,0 +1,58 @@
+#alias is2goldsmuggler {#3 e;s;#2 e;n;open door;n;close door s;#2 n;u;w;open door n; n;close door s;open box;n;e;n;w;n;w;w;n;n;}
+#alias is2undeadmidgaard {#3 e;s;#3 e;#2 n;#7 e}
+#alias ises2waterdean {ope door w;w;close door e;w;n;e;s;w;n;e;s;w;n;e;s;#3 w;#3 n;e;n;w;s;e;n;w;s;e;n;w;s;e;ope door e;e;close door w;}
+#alias ises2master {ope door w;w;close door e;w;n;e;s;w;n;e;s;w;n;e;s;w;#3 n;#3 e;s;e;n;w;s;e;n;w;s;e;n;w;s;ope door s;s;close door n;pick door s;ope door s;s;close door n}
+
+
+#alias ss2arboretum {#8 w;u;}
+#alias ss2barovia {#4 n;#3 e;#4 n;#4 s;open door s;#4 s;en mist;}
+#alias ss2centaurs {#4 n;#4 w;#10 n;}
+#alias ss2crematorium {#7 e;#2 s;e;#5 s;#3 w;#4 n;open hidden w;w;}
+#alias ss2crossroads {#6 w;#2 n;w;#3 n;w;#2 n;pick gateway;open gateway;#6 n;#3 e;open gate e;e;}
+#alias ss2dalinascastle {#8 w;u;#6 w;n;#3 w;s;w;}
+#alias ss2derros {#8 w;u;w;#2 s;w;s;w;s;#2 w;}
+#alias ss2dwarvenmountain {#3 s;#7 w;}
+#alias ss2ettinvillage {#8 w;u;n;}
+#alias ss2fairyforest {#6 w;n;}
+#alias ss2fairyresttree {#7 w;#2 n;#2 e;u;}
+#alias ss2fourtowersarena {#4 e;4 n;u;}
+#alias ss2grymlyns {#6 w;s;}
+#alias ss2infirmary {#8 w;u;#6 w;s;#3 w;}
+#alias ss2kendermore {#8 s;e;s;s;e;e;e;e;e;e;s;#2 e;}
+#alias ss2kozakura {#6 w;#2 n;w;#3 n;w;#2 n;}
+#alias ss2labyrinth {#8 w;u;#6 w;s;}
+#alias ss2mansion {#8 w;u;#6 w;n;w;n;}
+#alias ss2maw {#7 e;#2 s;e;#3 s;#5 e;}
+#alias ss2moria {#8 s;#16 w;open door w;w;#2 d;open door s;s;open barrier w;w;}
+#alias ss2murkwood {#6 w;#2 n;w;#2 n;}
+#alias ss2myconidrealms {#8 n;#2 e;n;}
+#alias ss2niebelungbeach {#7 e;#2 s;e;#4 s;}
+#alias ss2ogrecaverns {#7 e;#2 s;e;#3 s;#4 e;#2 s;#2 e;s;#2 s;#2 d;#3 s;u;e;open seaweed;d;#5 s;open crack;e;open door;e;open trapdoor;d;}
+#alias ss2opera {#4 w;#6 n;w;}
+#alias ss2perseverance {#4 n;#3 e;#4 n;}
+#alias ss2phantomcreek {#9 e;n;#4 e;#4 s;open doors;#4 s;enter mist;#6 e;open door;e;close door;#2 e;#2 s;#3 e;#2 s;#3 e;#3 s;#2 w;s;#2 w;s;open flap;w;}
+#alias ss2ravenloft {#9 e;n;#4 e;#4 s;open doors;#4 s;enter mist;#6 e;open door e;e;close door;#2 e;#2 s;#3 e;#2 s;#8 e;u;n;u;w;u;n;open portcullis;n;close portcullis;}
+#alias ss2ritastemple {#9 e;n;#2 e;s;#3 w;n;}
+#alias ss2sahaguins {#7 e;#2 s;e;#3 s;#4 e;#2 s;#2 e;#2 s;}
+#alias ss2salamis {#8 s;#6 w;#3 s;#2 e;hire chopak;}
+#alias ss2citadel {#5 n;}
+#alias ss2shadowkeep {#6 w;#2 n;w;#5 n;u;#2 n;e;n;}
+#alias ss2sinshold {#6 w;#2 n;w;#5 n;u;#2 n;e;n;un gates n;open gates n;#3 n;open door n;n;close door s;lock door s;e;u;e;#2 n;un doors n;open doors n;n;close door s;}
+#alias ss2skyelves {#9 e;n;#5 e;#3 n;}
+#alias ss2fiends {e;e;e;e;e;e;e;e;e;n;e;e;e;e;s;s;s;s;op door;s;s;s;s;s;en mist;e;e;e;e;e;e;op door;e;e;e;s;s;e;e;e;s;s;e;e;e;s;s;s;w;w;s;w;w;w;s;open flap;w;w;s;s;w;s;s;e;s;s;e;e;e;e;s;e;e;s;e;s;s;}
+#alias ss2templeofming {#9 e;n;#2 e;s;w;}
+#alias ss2templeruins {#7 e;#2 s;e;#5 s;#3 w;#3 n;#4 w;}
+#alias ss2theris {#7 e;#2 s;#2 e;}
+#alias ss2towerofnexialism {#9 e;n;#2 e;s;#2 w;}
+#alias ss2towerstemple {#8 w;u;#3 n;pray tower;}
+#alias ss2tysmihas {#9 e;n;#5 e;#2 n;e;}
+#alias ss2underdark {#8 s;e;s;#3 e;}
+#alias ss2underdark2 {#8 s;e;s;#3 e;#3 d;#3 n;#2 e;}
+#alias ss2xanthippe {#8 w;u;#6 w;n;#2 w;#2 s;#2 u;#5 s;open manhole;d;close manhole;}
+
+#nop Aasheron|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gatekeeper for (a token of safe passage);s;enter asheron;give token lor;
+#nop DemonWeb|#8 w;u;#6 w;n;#3 w;#4 s;pray lolth;d;open stone;e;s;s;d;d;e;d;d;s;d;e;d;#4 e;kill golem;#2 d;s;e;#2 d;#6 e;k_ill gatekeeper if you dont have the key go all down and get they key from the corpse go back up to where the keeper was;n;#3 e;s;e;s;e;#2 n;e;s;#3 e;#2 s;#2 e;n;e;u;e;e;s;
+#nop MAGIC|#8 s;e;s;#3 e;#3 d;#3 n;e;touch nose;w;s_neak by or k_ill the guard;#3 n;#2 w;pick doors;open doors;w;n;n;open doors w;w;
+#nop RiverOfBlood|Run to Area Near the entrance to Crematory
+#nop TownOfTheUndead|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gate Keeper for (A soft glowing gate key);
+#nop VampireLair|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gate Keeper for (A soft glowing gate key);unlock gates n;open gates n;#7 n;open gate;wander around until you file the room of A shallow grave of evil. Then press the tombstone and go down.;

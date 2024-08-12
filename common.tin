@@ -1,3 +1,5 @@
+#read RUNS runs.tin
+
 #var false {false}
 #var true {true}
 
