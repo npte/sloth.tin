@@ -50,9 +50,9 @@
 #alias ss2underdark2 {#8 s;e;s;#3 e;#3 d;#3 n;#2 e;}
 #alias ss2xanthippe {#8 w;u;#6 w;n;#2 w;#2 s;#2 u;#5 s;open manhole;d;close manhole;}
 
-#nop Aasheron|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gatekeeper for (a token of safe passage);s;enter asheron;give token lor;
-#nop DemonWeb|#8 w;u;#6 w;n;#3 w;#4 s;pray lolth;d;open stone;e;s;s;d;d;e;d;d;s;d;e;d;#4 e;kill golem;#2 d;s;e;#2 d;#6 e;k_ill gatekeeper if you dont have the key go all down and get they key from the corpse go back up to where the keeper was;n;#3 e;s;e;s;e;#2 n;e;s;#3 e;#2 s;#2 e;n;e;u;e;e;s;
-#nop MAGIC|#8 s;e;s;#3 e;#3 d;#3 n;e;touch nose;w;s_neak by or k_ill the guard;#3 n;#2 w;pick doors;open doors;w;n;n;open doors w;w;
-#nop RiverOfBlood|Run to Area Near the entrance to Crematory
-#nop TownOfTheUndead|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gate Keeper for (A soft glowing gate key);
-#nop VampireLair|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gate Keeper for (A soft glowing gate key);unlock gates n;open gates n;#7 n;open gate;wander around until you file the room of A shallow grave of evil. Then press the tombstone and go down.;
+#nop { Aasheron|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gatekeeper for (a token of safe passage);s;enter asheron;give token lor; }
+#nop { DemonWeb|#8 w;u;#6 w;n;#3 w;#4 s;pray lolth;d;open stone;e;s;s;d;d;e;d;d;s;d;e;d;#4 e;kill golem;#2 d;s;e;#2 d;#6 e;k_ill gatekeeper if you dont have the key go all down and get they key from the corpse go back up to where the keeper was;n;#3 e;s;e;s;e;#2 n;e;s;#3 e;#2 s;#2 e;n;e;u;e;e;s; }
+#nop { MAGIC|#8 s;e;s;#3 e;#3 d;#3 n;e;touch nose;w;s_neak by or k_ill the guard;#3 n;#2 w;pick doors;open doors;w;n;n;open doors w;w; }
+#nop { RiverOfBlood|Run to Area Near the entrance to Crematory }
+#nop { TownOfTheUndead|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gate Keeper for (A soft glowing gate key);  }
+#nop { VampireLair|#7 e;#2 s;e;#5 s;#3 w;#4 n;k_ill Gate Keeper for (A soft glowing gate key);unlock gates n;open gates n;#7 n;open gate;wander around until you file the room of A shallow grave of evil. Then press the tombstone and go down.;  }
