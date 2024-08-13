@@ -1,6 +1,11 @@
 #alias {tra} {
 	#var trackmob %1;
 	#send {track $trackmob};
+} 
+
+#alias {trat} {
+	#var trackmob $target;
+	#send {track $trackmob};
 }
 
 #act {lead %wward} {

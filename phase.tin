@@ -36,6 +36,9 @@
 #act {You get a worn pair of boots from the corpse of Lila} {drop boots}
 #act {You get some %1 dust from the corpse of %2 on the ground} {drop dust}
 #act {You get wreath of the ordained from the corpse of Lila that's on the ground} {drop wreath} 
-#act {You get an ancient parchment from the corpse of the librarian that's on the ground} {drop parchment}
-#act {You get a tattered note from the corpse} {drop note}
+#act {You get an ancient parchment from the corpse of the librarian that's on the ground} {junk parchment}
+#act {You get a tattered note from the corpse} {junk note}
+#act {You get a mesh of intertwined threads from the corpse} {junk mesh}
+#act {You get a decomposing brain from the corpse} {junk brain}
+#act {Ju-Ju Bokor spits out gold coins} {get gold}
 

@@ -10,6 +10,8 @@
 	};
 };
 
+#action {The webs tighten about you} {squirm};
+
 #alias {was} {
 	wake;
 	stand;

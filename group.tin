@@ -4,6 +4,12 @@
 	};
 };
 
+#action {%1 -- 'unweb'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		squirm;
+	};
+};
+
 #action {%1 -- 'entrench'} {
 	#if {"%1" == "$MSDP_GROUP_LEADER"} {
 		entrench;
@@ -24,6 +30,22 @@
 };
 
 #action {You failed to cast 'spectral shield'} {cast 'spectral shield'} 
+
+#action {%1 -- 'restiveness'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		cast 'restiveness';
+	};
+};
+
+#action {You failed to cast 'restiveness'} {cast 'restiveness'} 
+
+#action {%1 -- 'mindbar'} {
+	#if {"%1" == "$MSDP_GROUP_LEADER"} {
+		cast 'mindbar';
+	};
+};
+
+#action {You failed to cast 'mindbar'} {cast 'mindbar'} 
 
 #action {%1 -- 'mindbar'} {
 	#if {"%1" == "$MSDP_GROUP_LEADER"} {
