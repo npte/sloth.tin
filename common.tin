@@ -89,6 +89,8 @@
 
 #nop spells
 
+#alias {knock} {cast 'knock' %1 %2;ope %1 %2}
+
 #alias {march} {sing 'march'}
 
 #alias {fb} {
