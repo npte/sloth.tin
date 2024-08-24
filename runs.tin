@@ -1,7 +1,8 @@
 #alias is2goldsmuggler {#3 e;s;#2 e;n;open door;n;close door s;#2 n;u;w;open door n; n;close door s;open box;n;e;n;w;n;w;w;n;n;}
 #alias is2undeadmidgaard {#3 e;s;#3 e;#2 n;#7 e}
 #alias ises2waterdean {ope door w;w;close door e;w;n;e;s;w;n;e;s;w;n;e;s;#3 w;#3 n;e;n;w;s;e;n;w;s;e;n;w;s;e;ope door e;e;close door w;}
-#alias ises2master {ope door w;w;close door e;w;n;e;s;w;n;e;s;w;n;e;s;w;#3 n;#3 e;s;e;n;w;s;e;n;w;s;e;n;w;s;ope door s;s;close door n;pick door s;ope door s;s;close door n}
+#alias ises2naga {ope door w;w;close door e;w;n;e;s;w;n;e;s;w;n;e;s;w;#3 n;#3 e;s;e;n;ope door n;n;close door s}
+#alias ises2master {ope door s;s;close door n;w;s;e;n;w;s;e;n;w;s;ope door s;s;close door n;pick door s;ope door s;s;close door n}
 
 
 #alias ss2arboretum {#8 w;u;}
